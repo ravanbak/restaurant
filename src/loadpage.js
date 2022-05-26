@@ -1,8 +1,10 @@
-import "./style.css";
 import hero from './assets/hero.jpg';
 
 function loadPage() {
-    const content = document.querySelector('#content');
+    const content = document.querySelector('div#content');
+    if (!content) {
+        return;
+    }
 
     content.appendChild(getHeaderElement());
     content.appendChild(getBodyElement());
@@ -23,7 +25,7 @@ function getHeaderElement() {
     h2.textContent = 'Bajan Restaurant';
 
     const h3 = document.createElement('h3');
-    h3.textContent = 'Discover the taste of cheese and break (and other things) in the Carribean';
+    h3.textContent = 'Discover the taste of cheese and bread (and other things) in the Carribean';
 
     heroText.appendChild(h1);
     heroText.appendChild(h2);
@@ -54,6 +56,7 @@ function getBodyElement() {
 }
 
 function getFooterElement() {
+    
     const footer = document.createElement('div');
     footer.classList.add('footer');
 
@@ -61,19 +64,18 @@ function getFooterElement() {
     footerContent.classList.add('footer-content');
 
     const span = document.createElement('span');
-    span.textContent='&copy2022 David Ravanbakhsh';
+    span.textContent='Copyright © 2022 David Ravanbakhsh';
 
     const a = document.createElement('a');
     a.href = 'https://github.com/ravanbak';
     a.target = '_blank';
 
     const i = document.createElement('i');
-    i.classList.add('fa');
-    i.classList.add('fa-github');
+    i.classList.add('fa-brands');
+    i.classList.add('fa-github-square');
     i.classList.add('fa-2x');
-
     a.appendChild(i);
-
+    
     footerContent.appendChild(span);
     footerContent.appendChild(a);
 
