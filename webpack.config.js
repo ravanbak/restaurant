@@ -6,7 +6,7 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
-        loadPage: './src/loadpage.js',
+        // loadPage: './src/loadpage.js',
     },
     output: {
         // filename: 'main.js',

@@ -66,3 +66,7 @@ img.hero {
     align-items: center;
     justify-content: space-evenly;
 }
+
+.footer i {
+    color: rgb(247, 204, 125);
+}

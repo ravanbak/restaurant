@@ -1,4 +1,5 @@
 import hero from './assets/hero.jpg';
+import { updateContent } from './index';
 
 function loadPage() {
     const content = document.querySelector('div#content');
@@ -6,8 +7,10 @@ function loadPage() {
         return;
     }
 
+    // Load everything except content.
     content.appendChild(getHeaderElement());
-    content.appendChild(getBodyElement());
+    content.appendChild(getNavElement());
+    content.appendChild(getTabContentElement());
     content.appendChild(getFooterElement());
 }
 
@@ -43,16 +46,42 @@ function getHeaderElement() {
     return header;
 }
 
-function getBodyElement() {
-    const body = document.createElement('div');
-    body.classList.add('body');
+function getNavElement() {
+    const topnav = document.createElement('div');
+    topnav.id = 'topnav';
 
-    const div = document.createElement('div');
-    div.textContent = "Body content";
+    const btnHome = document.createElement('button');
+    btnHome.type = 'button';
+    btnHome.textContent = "Home";
+    btnHome.id = 'btn-home';
+    btnHome.value = 'home';
+    btnHome.addEventListener('click', updateContent);
+    topnav.appendChild(btnHome);
 
-    body.appendChild(div);
+    const btnMenu = document.createElement('button');
+    btnMenu.type = 'button';
+    btnMenu.textContent = "Menu";
+    btnMenu.id = 'btn-menu';
+    btnMenu.value = 'menu';
+    btnMenu.addEventListener('click', updateContent);
+    topnav.appendChild(btnMenu);
 
-    return body;
+    const btnContact = document.createElement('button');
+    btnContact.type = 'button';
+    btnContact.textContent = "Contact";
+    btnContact.id = 'btn-contact';
+    btnContact.value = 'contact';
+    btnContact.addEventListener('click', updateContent);
+    topnav.appendChild(btnContact);
+
+    return topnav;
+}
+
+function getTabContentElement() {
+    const tabContent = document.createElement('div');
+    tabContent.id = 'tabcontent';
+
+    return tabContent;
 }
 
 function getFooterElement() {
@@ -84,4 +113,4 @@ function getFooterElement() {
     return footer;
 }
 
-export default loadPage;
+export { loadPage };
