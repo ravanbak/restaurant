@@ -1,6 +1,7 @@
 function getMenuContent() {
     const menuContent = document.createElement('div');
-
+    menuContent.classList.add('tab-content');
+    
     let h1 = document.createElement('h1');
     h1.textContent = "Appetizers";
     menuContent.appendChild(h1);

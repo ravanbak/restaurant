@@ -1,5 +1,5 @@
 import hero from './assets/hero.jpg';
-import { updateContent } from './index';
+// import { updateTabContent } from './index';
 
 function loadPage() {
     const content = document.querySelector('div#content');
@@ -7,11 +7,12 @@ function loadPage() {
         return;
     }
 
-    // Load everything except content.
     content.appendChild(getHeaderElement());
     content.appendChild(getNavElement());
     content.appendChild(getTabContentElement());
     content.appendChild(getFooterElement());
+
+    // updateTabContent('home');
 }
 
 function getHeaderElement() {
@@ -28,7 +29,7 @@ function getHeaderElement() {
     h2.textContent = 'Bajan Restaurant';
 
     const h3 = document.createElement('h3');
-    h3.textContent = 'Discover the taste of cheese and bread (and other things) in the Carribean';
+    h3.textContent = 'Discover the taste of cheese and bread (and other things) in the Caribbean';
 
     heroText.appendChild(h1);
     heroText.appendChild(h2);
@@ -38,7 +39,7 @@ function getHeaderElement() {
 
     const img = new Image();
     img.src = hero;
-    img.alt = 'A round table, with seating for six, with a view of the Carribean.'
+    img.alt = 'A round table, with seating for six, with a view of the Caribbean Sea.'
     img.classList.add('hero');
 
     header.appendChild(img);
@@ -55,7 +56,7 @@ function getNavElement() {
     btnHome.textContent = "Home";
     btnHome.id = 'btn-home';
     btnHome.value = 'home';
-    btnHome.addEventListener('click', updateContent);
+    // btnHome.addEventListener('click', () => updateTabContent('home'));
     topnav.appendChild(btnHome);
 
     const btnMenu = document.createElement('button');
@@ -63,7 +64,7 @@ function getNavElement() {
     btnMenu.textContent = "Menu";
     btnMenu.id = 'btn-menu';
     btnMenu.value = 'menu';
-    btnMenu.addEventListener('click', updateContent);
+    // btnMenu.addEventListener('click', () => updateTabContent('menu'));
     topnav.appendChild(btnMenu);
 
     const btnContact = document.createElement('button');
@@ -71,7 +72,7 @@ function getNavElement() {
     btnContact.textContent = "Contact";
     btnContact.id = 'btn-contact';
     btnContact.value = 'contact';
-    btnContact.addEventListener('click', updateContent);
+    // btnContact.addEventListener('click', () => updateTabContent('contact'));
     topnav.appendChild(btnContact);
 
     return topnav;
@@ -85,7 +86,6 @@ function getTabContentElement() {
 }
 
 function getFooterElement() {
-    
     const footer = document.createElement('div');
     footer.classList.add('footer');
 

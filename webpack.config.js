@@ -5,11 +5,13 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        index: './src/index.js',
-        // loadPage: './src/loadpage.js',
+        main: './src/index.js',
+        loadPage: './src/loadpage.js',
+        home: './src/home.js',
+        menu: './src/menu.js',
+        contact: './src/contact.js',
     },
     output: {
-        // filename: 'main.js',
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,

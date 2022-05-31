@@ -1,11 +1,11 @@
 function getHomeContent() {
     const home = document.createElement('div');
-    home.classList.add('home');
+    home.classList.add('tab-content');
 
-    const div = document.createElement('div');
-    div.textContent = "Home content";
+    const h1 = document.createElement('h1');
+    h1.textContent = "Located in the heart of Barbados, or maybe the stomach of Barbados?";
 
-    home.appendChild(div);
+    home.appendChild(h1);
 
     return home;
 }
