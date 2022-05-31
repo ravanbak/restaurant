@@ -2,6 +2,7 @@
     --color-blue-ocean: #00b7a8;
     --color-deep-ocean: #123a43;
     --color-sand: #f4a460;
+    --color-sand-light: hsl(28, 87%, 80%);
 }
 
 * {
@@ -45,7 +46,7 @@ body {
 
 .hero-text h3 {
     font-style: italic;
-    text-align: center;
+    text-align: right;
 }
 
 img.hero {
@@ -73,11 +74,36 @@ img.hero {
 }
 
 .tab-content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
     color: var(--color-deep-ocean);
     background: var(--color-sand);
     padding: 30px;
     min-height: 500px;
     border: 1px solid var(--color-deep-ocean);
+}
+
+#home-img-container {
+    text-align: right;
+    position: relative;
+}
+
+#home-img-container img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--color-deep-ocean);
+}
+
+#home-img-container h1 {
+    max-height: 80%;
+    position: absolute; 
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -30%);
+    font-size: 2.5em;
+    color: var(--color-sand-light);
+    text-shadow: 3px 5px 5px var(--color-deep-ocean);
 }
 
 .body {

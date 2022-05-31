@@ -1,5 +1,4 @@
 import hero from './assets/hero.jpg';
-// import { updateTabContent } from './index';
 
 function loadPage() {
     const content = document.querySelector('div#content');
@@ -11,8 +10,6 @@ function loadPage() {
     content.appendChild(getNavElement());
     content.appendChild(getTabContentElement());
     content.appendChild(getFooterElement());
-
-    // updateTabContent('home');
 }
 
 function getHeaderElement() {
