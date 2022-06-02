@@ -110,4 +110,23 @@ function getFooterElement() {
     return footer;
 }
 
-export { loadPage };
+function addElement(parent, tagName, textContent, className) {
+    const el = document.createElement(tagName);
+
+    if (textContent) {
+        el.textContent = textContent;
+    }
+    
+    if (className) {
+        el.classList.add(className);
+    }
+
+    parent.appendChild(el);
+
+    return el;
+}
+
+export { 
+    loadPage,
+    addElement,
+};

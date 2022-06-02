@@ -1,0 +1,40 @@
+.menu-group-heading {
+    font-size: 2.5em;
+    margin: 20px auto 20px;
+    /* text-shadow: 1px 1px 3px rgb(0, 0, 0, 0.5); */
+}
+
+.menu-item * {
+    margin: 0;
+    padding: 0;
+    color: var(--color-deep-ocean);
+}
+
+.menu-item {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-content: center;
+    background: var(--color-sand-light);
+    padding: 25px 15px 0;
+    margin: 0 50px 20px 50px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.menu-item-name {
+    /* margin-top: 50px; */
+    width: 80%;
+}
+
+.menu-item-price {
+    margin-left: auto;
+    text-align: right;
+    font-style: italic;
+    width: 20%;
+    font-weight: bold;
+}
+
+.menu-item-description {
+    margin: 20px 0;
+}
