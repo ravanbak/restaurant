@@ -1,0 +1,70 @@
+{
+    "appetizers": [
+        {
+            "name": "Fried Plantains",
+            "description": "Our fried ripe plantains have a crispy, caramelized texture and an irresistibly sweet taste.",
+            "price": 4.99
+        },
+        {
+            "name": "Fish Cakes",
+            "description": "Tender flakes of fish mixed with butter, garlic, and potato, then coated with breadcrumbs and pan fried until golden.",
+            "price": 6.99
+        },
+        {
+            "name": "Conkies",
+            "description": "A sweet cornmeal-based food-like item.",
+            "price": 5.99
+        },
+        {
+            "name": "Jug-Jug",
+            "description": "Not sure about this one, either. Maybe two jugs?",
+            "price": 7.99
+        },
+        {
+            "name": "Rice and Peas",
+            "description": "Rice. With peas.",
+            "price": 5.49
+        }
+    ],
+    "mains": [
+        {
+            "name": "Cou-cou",
+            "description": "The national dish of Barbados when eaten with flying fish.",
+            "price": 18.99
+        },
+        {
+            "name": "Jug-Jug",
+            "description": "This again. Still don't know what it is.",
+            "price": 18.99
+        },
+        {
+            "name": "Fried Flying Fish",
+            "description": "Fresh flying fish fillets, fried frantically for five fortnights. Featuring fashionably fat french fries.",
+            "price": 18.99
+        }
+    ],
+    "desserts": [
+        {
+            "name": "Bajan Black Cake",
+            "description": "Just read the name.",
+            "price": 14.99
+        },
+        {
+            "name": "Corn Pie",
+            "description": "This has onion in it, yet it's listed as a dessert. You can't explain that.",
+            "price": 14.99
+        }
+    ],
+    "beverages": [
+        {
+            "name": "Water",
+            "description": "Only the finest hydrogen and oxygen atoms, combined in the perfect ratio of 2:1.",
+            "price": 0.00
+        },
+        {
+            "name": "Paw-Paw and Coconut Drink",
+            "description": "We take a paw and combine it with another paw, for a total of two paws, then we throw in some coconut.",
+            "price": 3.99
+        }
+    ]
+}
