@@ -26,7 +26,7 @@ function getHeaderElement() {
     h2.textContent = 'Bajan Restaurant';
 
     const h3 = document.createElement('h3');
-    h3.textContent = 'Discover the taste of cheese and bread (and other things) in the Caribbean';
+    h3.textContent = 'Discover the taste of cheese and bread in the Caribbean';
 
     heroText.appendChild(h1);
     heroText.appendChild(h2);

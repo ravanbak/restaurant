@@ -6,7 +6,7 @@
 
 .menu-item * {
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     color: var(--color-deep-ocean);
 }
 
@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     align-content: center;
     background: var(--color-sand-light);
-    padding: 25px 15px 0;
+    padding: 25px 15px 0 25px;
     margin: 0 50px 20px 50px;
     border-radius: 20px;
     box-shadow: var(--box-shadow);
@@ -24,17 +24,22 @@
 
 .menu-item-name {
     /* margin-top: 50px; */
-    width: 80%;
+    width: 60%;
+    font-size: 3em;
+    font-weight: bolder;
 }
 
 .menu-item-price {
     margin-left: auto;
     text-align: right;
     font-style: italic;
-    width: 20%;
-    font-weight: bold;
+    width: 40%;
+    font-size: 2em;
+    font-weight: bolder;
 }
 
 .menu-item-description {
-    margin: 20px 0;
+    margin: 30px 0;
+    font-size: 1.5em;
+    font-weight: bolder;
 }

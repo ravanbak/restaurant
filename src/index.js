@@ -62,10 +62,10 @@ function hilightTab(tab) {
     const buttons = document.querySelectorAll('#topnav button');
     for (let i = 0; i < buttons.length; i++) {
         // buttons[i].style.border = '1px solid';
-        // buttons[i].style.borderBottom = '8px solid';
+        buttons[i].style.borderBottom = '9px solid';
         // buttons[i].style.borderBottom = 'none';
-        // buttons[i].style.borderColor = '#f8c9a0'; // 'rgb(0, 183, 168)';
-        buttons[i].style.backgroundColor = '#f8c9a0'; // 'rgb(0, 183, 168)';
+        buttons[i].style.borderColor = '#f8c9a000'; // 'rgb(0, 183, 168)';
+        // buttons[i].style.backgroundColor = '#f8c9a0'; // 'rgb(0, 183, 168)';
     }
 
     let button;
@@ -82,8 +82,8 @@ function hilightTab(tab) {
             break;
     }
 
-    // button.style.borderColor = '#f4a460'; // '#123a43';
-    button.style.backgroundColor = '#f4a460';
+    button.style.borderColor = '#123a43';
+    // button.style.backgroundColor = '#f4a460';
 }
 
 export { updateTabContent };
