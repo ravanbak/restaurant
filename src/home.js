@@ -19,9 +19,9 @@ function getHomeContent() {
     h1.textContent = "Located in the heart of Barbados"
     textContainer.appendChild(h1);
 
-    const h2 = document.createElement('h3');
-    h2.textContent = "(not pictured here - this is some other part of Barbados)";
-    textContainer.appendChild(h2);
+    const h3 = document.createElement('h3');
+    h3.textContent = "(not pictured here - this is a different part of Barbados)";
+    textContainer.appendChild(h3);
 
     container.appendChild(textContainer);
 

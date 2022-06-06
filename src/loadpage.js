@@ -16,30 +16,34 @@ function getHeaderElement() {
     const header = document.createElement('div');
     header.classList.add('header');
 
-    const heroText = document.createElement('div');
-    heroText.classList.add('hero-text');
+    const divTitleAndImage = document.createElement('div');
+    
+    const divTitle = document.createElement('div');
+    divTitle.classList.add('hero-text');
 
     const h1 = document.createElement('h1');
     h1.textContent = 'Cheese on Bread';
+    divTitle.appendChild(h1);
 
     const h2 = document.createElement('h2');
     h2.textContent = 'Bajan Restaurant';
+    divTitle.appendChild(h2);
 
-    const h3 = document.createElement('h3');
-    h3.textContent = 'Discover the taste of cheese and bread in the Caribbean';
-
-    heroText.appendChild(h1);
-    heroText.appendChild(h2);
-    heroText.appendChild(h3);
-
-    header.appendChild(heroText);
+    divTitleAndImage.appendChild(divTitle);
 
     const img = new Image();
     img.src = hero;
     img.alt = 'A round table, with seating for six, with a view of the Caribbean Sea.'
     img.classList.add('hero');
 
-    header.appendChild(img);
+    divTitleAndImage.appendChild(img);
+
+    header.appendChild(divTitleAndImage);
+
+    const h3 = document.createElement('h3');
+    h3.textContent = 'Discover the taste of cheese and bread in the Caribbean';
+
+    header.appendChild(h3);
 
     return header;
 }
@@ -53,7 +57,6 @@ function getNavElement() {
     btnHome.textContent = "Home";
     btnHome.id = 'btn-home';
     btnHome.value = 'home';
-    // btnHome.addEventListener('click', () => updateTabContent('home'));
     topnav.appendChild(btnHome);
 
     const btnMenu = document.createElement('button');
@@ -61,7 +64,6 @@ function getNavElement() {
     btnMenu.textContent = "Menu";
     btnMenu.id = 'btn-menu';
     btnMenu.value = 'menu';
-    // btnMenu.addEventListener('click', () => updateTabContent('menu'));
     topnav.appendChild(btnMenu);
 
     const btnContact = document.createElement('button');
@@ -69,7 +71,6 @@ function getNavElement() {
     btnContact.textContent = "Contact";
     btnContact.id = 'btn-contact';
     btnContact.value = 'contact';
-    // btnContact.addEventListener('click', () => updateTabContent('contact'));
     topnav.appendChild(btnContact);
 
     return topnav;

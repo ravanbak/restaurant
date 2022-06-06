@@ -1,13 +1,5 @@
 import { addElement } from "./loadpage";
 
-// 29 Flamboyant Ave Sunset Crest, Saint James
-
-// City:  Barbados
-
-// State/province/area:   Barbados
-
-// Phone number  246-432-7189
-
 function getContactContent() {
     const contactContent = document.createElement('div');
     contactContent.classList.add('tab-content');

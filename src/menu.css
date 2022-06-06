@@ -1,12 +1,10 @@
 .menu-group-heading {
-    font-size: 2.5em;
+    font-size: 4em;
     margin: 20px auto 20px;
-    /* text-shadow: 1px 1px 3px rgb(0, 0, 0, 0.5); */
 }
 
 .menu-item * {
     margin: 0;
-    /* padding: 0; */
     color: var(--color-deep-ocean);
 }
 
@@ -23,7 +21,6 @@
 }
 
 .menu-item-name {
-    /* margin-top: 50px; */
     width: 60%;
     font-size: 3em;
     font-weight: bolder;
