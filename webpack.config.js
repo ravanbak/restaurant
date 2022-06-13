@@ -3,7 +3,8 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-    mode: 'production',
+    // mode: 'production',
+    mode: 'development',
     entry: {
         main: './src/index.js',
         loadPage: './src/loadpage.js',
@@ -11,6 +12,7 @@ module.exports = {
         menu: './src/menu.js',
         contact: './src/contact.js',
     },
+    devtool: 'inline-source-map',
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),

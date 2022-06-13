@@ -153,6 +153,55 @@ img.hero {
     padding: 40px;
 }
 
+.slideshow-container {
+    display: flex;
+    min-height: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slideshow-container .slides {
+    display: none;
+}
+
+.slideshow-container blockquote {
+    text-align: center;
+    margin: 10px;
+}
+
+.prev, .next {
+    color: var(--color-sand);
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+}
+
+.quote {
+    color: var(--color-deep-ocean);
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.attrib {
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .contact-card {
     color: var(--color-deep-ocean);
     background: var(--color-sand-light);
@@ -162,6 +211,7 @@ img.hero {
     border-radius: 20px;
     box-shadow: var(--box-shadow);
 }
+
 .footer * {
     display: flex;
     background-color: var(--color-blue-ocean);

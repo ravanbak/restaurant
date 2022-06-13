@@ -1,6 +1,6 @@
 import "./style.css";
 import { loadPage } from "./loadpage";
-import { getHomeContent } from "./home";
+import { getHomeContent, showSlides } from "./home";
 import { getMenuContent } from "./menu";
 import { getContactContent } from "./contact";
 
@@ -44,6 +44,7 @@ function updateTabContent(tab) {
     switch (tab) {
         case 'home':
             tabContent.appendChild(getHomeContent());
+            showSlides();
             break;
         
         case 'menu':
