@@ -7,10 +7,10 @@ module.exports = {
     // mode: 'development',
     entry: {
         main: './src/index.js',
-        loadPage: './src/loadpage.js',
-        home: './src/home.js',
-        menu: './src/menu.js',
-        contact: './src/contact.js',
+        // loadPage: './src/loadpage.js',
+        // home: './src/home.js',
+        // menu: './src/menu.js',
+        // contact: './src/contact.js',
     },
     // devtool: 'inline-source-map',
     output: {
