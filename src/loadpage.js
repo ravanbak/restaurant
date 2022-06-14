@@ -16,20 +16,11 @@ function getHeaderElement() {
     const header = document.createElement('div');
     header.classList.add('header');
 
-    const divTitleAndImage = document.createElement('div');
-    
-    const divTitle = document.createElement('div');
-    divTitle.classList.add('hero-text');
+    const divTitleAndImage = addElement(header, 'div');
+    const divTitle = addElement(divTitleAndImage, 'div', '', 'hero-text');
 
-    const h1 = document.createElement('h1');
-    h1.textContent = 'Cheese on Bread';
-    divTitle.appendChild(h1);
-
-    const h2 = document.createElement('h2');
-    h2.textContent = 'Bajan Restaurant';
-    divTitle.appendChild(h2);
-
-    divTitleAndImage.appendChild(divTitle);
+    const h1 = addElement(divTitle, 'h1', 'Cheese on Bread');
+    const h2 = addElement(divTitle, 'h2', 'Bajan Restaurant');
 
     const img = new Image();
     img.src = hero;
@@ -38,12 +29,7 @@ function getHeaderElement() {
 
     divTitleAndImage.appendChild(img);
 
-    header.appendChild(divTitleAndImage);
-
-    const h3 = document.createElement('h3');
-    h3.textContent = 'Discover the taste of cheese and bread in the Caribbean';
-
-    header.appendChild(h3);
+    const h3 = addElement(header, 'h3', 'Discover the taste of cheese and bread in the Caribbean');
 
     return header;
 }
@@ -52,26 +38,9 @@ function getNavElement() {
     const topnav = document.createElement('div');
     topnav.id = 'topnav';
 
-    const btnHome = document.createElement('button');
-    btnHome.type = 'button';
-    btnHome.textContent = "Home";
-    btnHome.id = 'btn-home';
-    btnHome.value = 'home';
-    topnav.appendChild(btnHome);
-
-    const btnMenu = document.createElement('button');
-    btnMenu.type = 'button';
-    btnMenu.textContent = "Menu";
-    btnMenu.id = 'btn-menu';
-    btnMenu.value = 'menu';
-    topnav.appendChild(btnMenu);
-
-    const btnContact = document.createElement('button');
-    btnContact.type = 'button';
-    btnContact.textContent = "Contact";
-    btnContact.id = 'btn-contact';
-    btnContact.value = 'contact';
-    topnav.appendChild(btnContact);
+    addElement(topnav, 'button', "Home", '', 'btn-home');
+    addElement(topnav, 'button', "Menu", '', 'btn-menu');
+    addElement(topnav, 'button', 'Contact', '', 'btn-contact');
 
     return topnav;
 }
@@ -87,31 +56,23 @@ function getFooterElement() {
     const footer = document.createElement('div');
     footer.classList.add('footer');
 
-    const footerContent = document.createElement('div');
-    footerContent.classList.add('footer-content');
+    const footerContent = addElement(footer, 'div', '', 'footer-content');
 
-    const span = document.createElement('span');
-    span.textContent='Copyright © 2022 David Ravanbakhsh';
+    addElement(footerContent, 'span', 'Copyright © 2022 David Ravanbakhsh');
 
-    const a = document.createElement('a');
+    const a = addElement(footerContent, 'a');
     a.href = 'https://github.com/ravanbak';
     a.target = '_blank';
 
-    const i = document.createElement('i');
+    const i = addElement(a, 'i');
     i.classList.add('fa-brands');
     i.classList.add('fa-github-square');
     i.classList.add('fa-2x');
-    a.appendChild(i);
-    
-    footerContent.appendChild(span);
-    footerContent.appendChild(a);
-
-    footer.appendChild(footerContent);
 
     return footer;
 }
 
-function addElement(parent, tagName, textContent, className) {
+function addElement(parent, tagName, textContent, className, id) {
     const el = document.createElement(tagName);
 
     if (textContent) {
@@ -120,6 +81,10 @@ function addElement(parent, tagName, textContent, className) {
     
     if (className) {
         el.classList.add(className);
+    }
+
+    if (id) {
+        el.id = id;
     }
 
     parent.appendChild(el);

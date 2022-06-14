@@ -8,7 +8,7 @@ const initPage = function() {
     loadPage();
     addTabButtonEventListeners();
     
-    updateTabContent('home'); // Start at home tab
+    updateTabContent('home'); // Start on home tab
 }();
 
 function clearTabContent() {

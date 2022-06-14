@@ -110,13 +110,13 @@ function showSlides() {
     // Show a slideshow of customer reviews.
 
     let slides = document.getElementsByClassName('slides');
-
     if (slides) {
         if (slideIntervalID < 0) {
             slideIntervalID = setInterval(() => showNextSlide(1), SLIDE_INTERVAL_MS);
         }
     }
 
+    // Show the current slide
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
     }

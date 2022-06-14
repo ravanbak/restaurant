@@ -11,16 +11,6 @@
     src: url(./assets/Bernardo\ Moda.ttf);
 }
 
-@font-face {
-    font-family: GreatVibes;
-    src: url(./assets/GreatVibes-Regular.ttf);
-}
-
-@font-face {
-    font-family: Lieselotte;
-    src: url(./assets/Lieselotte\ -\ Personal\ Use.ttf);
-}
-
 * {
     /* border: 1px solid rgb(255, 8, 136); */
 }
