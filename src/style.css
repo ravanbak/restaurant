@@ -60,7 +60,7 @@ body {
     font-size: 4em;
     margin: 0;
     padding: 0;
-    text-shadow: 3px 3px 10px teal;
+    text-shadow: 3px 3px 10px var(--color-deep-ocean);
 }
 
 .hero-text h2 {
@@ -69,7 +69,7 @@ body {
 }
 
 .header h3 {
-    text-shadow: 3px 3px 10px azure;
+    text-shadow: 3px 3px 16px white;
     font-style: italic;
     font-size: 1.5em;
     margin: 20px auto 0;
@@ -205,17 +205,17 @@ img.hero {
 .contact-card {
     color: var(--color-deep-ocean);
     background: var(--color-sand-light);
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bolder;
-    padding: 40px;
+    padding: 0 40px 40px;
     border-radius: 20px;
     box-shadow: var(--box-shadow);
 }
 
 .footer * {
     display: flex;
-    background-color: var(--color-blue-ocean);
-    color: var(--color-deep-ocean);
+    background-color: var(--color-deep-ocean);
+    color: var(--color-blue-ocean);
     justify-content: center;
 }
 
@@ -227,6 +227,6 @@ img.hero {
 }
 
 .footer i {
-    color: var(--color-deep-ocean);
+    color: var(--color-sand);
     margin-left: 20px;
 }
