@@ -3,8 +3,8 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-    // mode: 'production',
-    mode: 'development',
+    mode: 'production',
+    // mode: 'development',
     entry: {
         main: './src/index.js',
         loadPage: './src/loadpage.js',
