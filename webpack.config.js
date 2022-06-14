@@ -12,7 +12,7 @@ module.exports = {
         menu: './src/menu.js',
         contact: './src/contact.js',
     },
-    devtool: 'inline-source-map',
+    // devtool: 'inline-source-map',
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
