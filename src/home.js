@@ -15,17 +15,17 @@ const reviews = [
         'name': 'Reissa Scott',
     },
     {
-        'review': '"I ordered some fried plantains and they were exactly as described."',
+        'review': '"I ordered the fried plantains and they were exactly as described."',
         'name': 'Natasha Ichiro',
     }    
 ];
 
 let slideIdx = 0;
-let slideIntervalID = -1;
+let slideIntervalID = 0;
 const SLIDE_INTERVAL_MS = 7000;
 
 function getHomeContent() {
-    slideIdx = 0;
+    stopSlideShowTimer(); // make the timer restart if we're returning to this tab
 
     const home = document.createElement('div');
     home.classList.add('tab-content');
@@ -78,21 +78,34 @@ function getCustomerReviewSlideshowElement() {
     return slideshow;
 }
 
-function showNextSlide(n) {
-    // Clear the interval and restart it so that, if the user clicked an arrow to
-    // change slides, the next slide will be displayed for the full interval length.
-
-    if (slideIntervalID >= 0) {
-        clearInterval(slideIntervalID);
-        slideIntervalID = -1;
+function stopSlideShowTimer() {
+    if (slideIntervalID <= 0) {
+        return;
     }
 
-    let slides = document.getElementsByClassName('slides');
-    if (!slides) {
+    clearInterval(slideIntervalID);
+    slideIntervalID = 0;
+}
+
+function startSlideShowTimer() {
+    if (slideIntervalID > 0) {
+        // Timer is already running.
         return;
     }
 
     slideIntervalID = setInterval(() => showNextSlide(1), SLIDE_INTERVAL_MS);
+}
+
+function showNextSlide(n) {
+    // Stop and restart the timer so that, if the user clicked an arrow to
+    // change slides, the next slide will be displayed for the full interval length.
+
+    stopSlideShowTimer();
+
+    let slides = document.getElementsByClassName('slides');
+    if (slides.length === 0) {
+        return;
+    }
 
     slideIdx += n;
     
@@ -110,12 +123,12 @@ function showSlides() {
     // Show a slideshow of customer reviews.
 
     let slides = document.getElementsByClassName('slides');
-    if (slides) {
-        if (slideIntervalID < 0) {
-            slideIntervalID = setInterval(() => showNextSlide(1), SLIDE_INTERVAL_MS);
-        }
+    if (slides.length === 0) {
+        return;
     }
-
+    
+    startSlideShowTimer();
+    
     // Show the current slide
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
