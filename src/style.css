@@ -216,6 +216,10 @@ img.hero {
     justify-content: center;
 }
 
+.footer a {
+    text-decoration: none;
+}
+
 .footer i {
     color: var(--color-sand);
     margin-left: 20px;
